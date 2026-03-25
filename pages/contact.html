@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Форма для зв'язку з творцями фанатського сайту про Фрірен.">
+    <title>Контакти | Фрірен</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">Фрірен's Journey</span>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="../index.html">Головна</a></li>
+                    <li><a href="about.html">Про Фрірен</a></li>
+                    <li><a href="contact.html" class="active">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Зв'яжіться з нами</h1>
+            
+            <div class="section">
+                <p>Маєте питання щодо сайту або хочете поділитися своєю любов'ю до аніме? Заповніть форму нижче!</p>
+            </div>
+            
+            <div class="form-card">
+                <h2>📝 Форма зворотного зв'язку</h2>
+                
+                <form action="./submit.html" method="get">
+                    <div class="form-group">
+                        <label for="name">Ваше ім'я <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required minlength="2" maxlength="50" placeholder="Наприклад, Фрірен">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="frieren@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Номер телефону</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+380 99 123 45 67">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="topic">Тема звернення</label>
+                        <select id="topic" name="topic">
+                            <option value="feedback">Відгук про сайт</option>
+                            <option value="question">Питання про аніме</option>
+                            <option value="coop">Співпраця</option>
+                            <option value="other">Інше</option>
+                        </select>
+                    </div>
+                    
+                    <fieldset>
+                        <legend>Зручний спосіб зв'язку</legend>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="contactWay" value="email" checked> Email
+                            </label>
+                            <label>
+                                <input type="radio" name="contactWay" value="phone"> Телефон
+                            </label>
+                        </div>
+                    </fieldset>
+                    
+                    <div class="form-group">
+                        <label for="message">Ваше повідомлення</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Напишіть, яка серія вам сподобалась найбільше..."></textarea>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="agree" required> Я погоджуюсь з правилами обробки даних (вигаданими).
+                        </label>
+                    </div>
+                    
+                    <div class="button-group">
+                        <button type="submit" class="btn btn-primary">📨 Надіслати повідомлення</button>
+                        <button type="reset" class="btn btn-secondary">🗑️ Очистити форму</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Студент ІП-23. Всі права захищено.</p>
+        </div>
+    </footer>
+    <script src="../app.js" defer></script>
+</body>
+</html>
