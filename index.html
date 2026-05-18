@@ -15,6 +15,10 @@
                 <span class="logo-icon">✨</span>
                 <span class="logo-text">Фрірен's Journey</span>
             </div>
+            
+           
+            <button class="menu-toggle" aria-label="Меню" aria-expanded="false">☰</button>
+            
             <nav>
                 <ul class="nav-list">
                     <li><a href="index.html" class="active">Головна</a></li>
@@ -22,6 +26,9 @@
                     <li><a href="pages/contact.html">Контакти</a></li>
                 </ul>
             </nav>
+            
+            
+            <button class="theme-switch" aria-label="Змінити тему">🌙</button>
         </div>
     </header>
 
@@ -38,14 +45,70 @@
                 <p>Аніме "Проводжаюча в останній шлях Фрірен" (Sōsō no Frieren) — це зворушлива історія про дружбу, втрату та нові починання. Воно отримало безліч нагород і вважається одним із найкращих аніме останніх років.</p>
             </div>
             
+            
             <div class="section">
                 <h2>Ключові персонажі</h2>
-                <ul class="styled-list">
-                    <li><strong>Фрірен</strong> — ельфійка-маг, яка намагається зрозуміти людей.</li>
-                    <li><strong>Ферн</strong> — старанна учениця Фрірен, яка володіє величезним магічним потенціалом.</li>
-                    <li><strong>Штарк</strong> — хоробрий воїн, який приєднується до подорожі.</li>
-                    <li><strong>Гіммель</strong> — герой минулого, чиї спогади надихають Фрірен.</li>
-                </ul>
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Всі</button>
+                    <button class="filter-btn" data-filter="elf">Ельфи</button>
+                    <button class="filter-btn" data-filter="human">Люди</button>
+                    <button class="filter-btn" data-filter="warrior">Воїни</button>
+                </div>
+                
+                <div class="characters-grid">
+                    <div class="character-card" data-category="elf">
+                        <h3>✨ Фрірен</h3>
+                        <p>Ельфійка-маг, понад 1000 років</p>
+                    </div>
+                    <div class="character-card" data-category="human">
+                        <h3>🔥 Ферн</h3>
+                        <p>Людина-маг, учениця Фрірен</p>
+                    </div>
+                    <div class="character-card" data-category="human warrior">
+                        <h3>⚔️ Штарк</h3>
+                        <p>Воїн, син воїна</p>
+                    </div>
+                    <div class="character-card" data-category="human">
+                        <h3>👑 Гіммель</h3>
+                        <p>Герой, друг Фрірен</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- АКОРДЕОН (FAQ) -->
+            <div class="accordion">
+                <h2>❓ Часті питання про Фрірен</h2>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Скільки років Фрірен? 
+                        <span>▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Фрірен понад 1000 років. Як ельфійка, вона старіє дуже повільно.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Чому вона подорожує? 
+                        <span>▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Фрірен подорожує, щоб краще зрозуміти людей і виконати обіцянку, дану Гіммелю.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Чи варто дивитися аніме? 
+                        <span>▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Так! Це один із найкращих тайтлів останніх років, який отримав безліч нагород.</p>
+                    </div>
+                </div>
             </div>
             
             <div class="card">
@@ -58,8 +121,8 @@
             </div>
             
             <figure>
-                <img src="assets/img/frieren.jpg" alt="Фрірен стоїть на тлі зеленого поля зі своїм магічним посохом" width="600" height="400">
-                <figcaption>Фрірен у своїй подорожі. Джерело: фанатський арт.</figcaption>
+                <img src="assets/img/frieren-sousou-no-frieren-v0-kzjbfmjewkrb1.webp" alt="Фрірен стоїть на тлі зеленого поля зі своїм магічним посохом" width="600" height="400">
+                <figcaption>Фрірен у своїй подорожі. Натисніть на зображення, щоб збільшити.</figcaption>
             </figure>
             
             <div class="section">
@@ -104,9 +167,23 @@
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2026 Студент ІП-23. Всі права захищено. Сайт створено в навчальних цілях.</p>
+            <p>&copy; <span class="current-year">2026</span> Студент ІП-23. Всі права захищено. Сайт створено в навчальних цілях.</p>
         </div>
     </footer>
+    
+   
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" src="" alt="Збільшене зображення">
+        </div>
+    </div>
+    
+    
+    <button class="back-to-top" aria-label="Вгору">↑</button>
+    
+    
+    <script src="js/main.js" defer></script>
     <script src="app.js" defer></script>
 </body>
 </html>

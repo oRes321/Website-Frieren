@@ -235,3 +235,233 @@
         background-color: rgba(74, 159, 110, 0.1);
     }
 }
+
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: white;
+    padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .site-header .container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .nav-list {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    
+    .nav-list.active {
+        display: flex;
+    }
+}
+
+
+.theme-switch {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.theme-switch:hover {
+    transform: scale(1.1);
+    background: rgba(255,255,255,0.3);
+}
+
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    font-size: 24px;
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--color-accent);
+    transform: translateY(-3px);
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: var(--color-accent);
+}
+
+
+.accordion-item {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-surface);
+    border: none;
+    text-align: left;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.accordion-header:hover {
+    background: rgba(230, 180, 34, 0.1);
+}
+
+.accordion-content {
+    max-height: 0;
+    padding: 0 1rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: var(--color-surface);
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 200px;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.accordion-header span {
+    transition: transform 0.3s;
+}
+
+.accordion-item.active .accordion-header span {
+    transform: rotate(180deg);
+}
+
+
+.filter-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    background: var(--color-surface);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.filter-btn:hover {
+    border-color: var(--color-accent);
+}
+
+.character-card {
+    padding: 1rem;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+}
+
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+
+body.theme-dark {
+    --color-bg: #1a1a2e;
+    --color-surface: #16213e;
+    --color-text: #eef5ff;
+    --color-text-light: #b8c7e7;
+    --color-border: #2a3b5c;
+}
+
+body.theme-dark .section,
+body.theme-dark .card,
+body.theme-dark .form-card,
+body.theme-dark .media-card,
+body.theme-dark .accordion-header,
+body.theme-dark .accordion-content,
+body.theme-dark .character-card {
+    background-color: var(--color-surface);
+}
