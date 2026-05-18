@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Фрірен - Магічний посох",
+      "category": "magic",
+      "description": "Легендарний посох, який використовує Фрірен у своїх подорожах. Допомагає концентрувати магічну енергію.",
+      "image": "../assets/img/item1.jpg",
+      "price": 299,
+      "rating": 4.9
+    },
+    {
+      "id": 2,
+      "title": "Гріммер - Книга заклинань",
+      "category": "book",
+      "description": "Давня книга з магічними заклинаннями, яку Фрірен знайшла під час подорожі.",
+      "image": "../assets/img/item2.jpg",
+      "price": 149,
+      "rating": 4.7
+    },
+    {
+      "id": 3,
+      "title": "Зілля зцілення",
+      "category": "potion",
+      "description": "Магічне зілля, яке швидко відновлює сили та зцілює рани.",
+      "image": "../assets/img/item3.jpg",
+      "price": 49,
+      "rating": 4.5
+    },
+    {
+      "id": 4,
+      "title": "Амулет захисту",
+      "category": "accessory",
+      "description": "Амулет, який захищає власника від темної магії.",
+      "image": "../assets/img/item4.jpg",
+      "price": 89,
+      "rating": 4.8
+    },
+    {
+      "id": 5,
+      "title": "Літаючий килим",
+      "category": "magic",
+      "description": "Чарівний килим, на якому можна літати над землею.",
+      "image": "../assets/img/item5.jpg",
+      "price": 499,
+      "rating": 4.9
+    },
+    {
+      "id": 6,
+      "title": "Зірковий пил",
+      "category": "potion",
+      "description": "Рідкісний інгредієнт для найсильніших заклинань.",
+      "image": "../assets/img/item6.jpg",
+      "price": 199,
+      "rating": 4.6
+    },
+    {
+      "id": 7,
+      "title": "Щоденник Гіммеля",
+      "category": "book",
+      "description": "Особистий щоденник героя, який надихає Фрірен на подорожі.",
+      "image": "../assets/img/item7.jpg",
+      "price": 79,
+      "rating": 5.0
+    },
+    {
+      "id": 8,
+      "title": "Кільце невидимості",
+      "category": "accessory",
+      "description": "Кільце, яке робить власника невидимим на короткий час.",
+      "image": "../assets/img/item8.jpg",
+      "price": 159,
+      "rating": 4.4
+    },
+    {
+      "id": 9,
+      "title": "Кришталева куля",
+      "category": "magic",
+      "description": "Передбачає майбутнє та показує віддалені місця.",
+      "image": "../assets/img/item9.jpg",
+      "price": 349,
+      "rating": 4.8
+    },
+    {
+      "id": 10,
+      "title": "Еліксир безсмертя",
+      "category": "potion",
+      "description": "Легендарний еліксир, який продовжує життя (обережно!)",
+      "image": "../assets/img/item10.jpg",
+      "price": 999,
+      "rating": 5.0
+    }
+  ]
+}

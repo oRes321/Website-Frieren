@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог магічних предметів | Фрірен</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">Фрірен's Journey</span>
+            </div>
+            <button class="menu-toggle" aria-label="Меню" aria-expanded="false">☰</button>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="../index.html">Головна</a></li>
+                    <li><a href="about.html">Про Фрірен</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                </ul>
+            </nav>
+            <button class="theme-switch" aria-label="Змінити тему">🌙</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>📦 Каталог магічних предметів</h1>
+            
+            <div class="section">
+                <p>Досліджуйте унікальні артефакти зі світу Фрірен. Кожен предмет має свою історію та магічні властивості.</p>
+            </div>
+
+           
+            <div class="catalog-controls">
+               
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="🔍 Пошук за назвою..." class="search-input">
+                </div>
+
+             
+                <div class="filter-controls">
+                    <span>📂 Категорія:</span>
+                    <button class="filter-btn active" data-category="all">Всі</button>
+                    <button class="filter-btn" data-category="magic">🔮 Магія</button>
+                    <button class="filter-btn" data-category="book">📖 Книги</button>
+                    <button class="filter-btn" data-category="potion">🧪 Зілля</button>
+                    <button class="filter-btn" data-category="accessory">💍 Аксесуари</button>
+                </div>
+
+         
+                <div class="sort-controls">
+                    <span>📊 Сортувати:</span>
+                    <select id="sortSelect" class="sort-select">
+                        <option value="default">За замовчуванням</option>
+                        <option value="title-asc">За назвою (А-Я)</option>
+                        <option value="title-desc">За назвою (Я-А)</option>
+                        <option value="price-asc">За ціною (від дешевих)</option>
+                        <option value="price-desc">За ціною (від дорогих)</option>
+                        <option value="rating-desc">За рейтингом (високі)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="loadingState" class="loading-state">
+                <div class="spinner"></div>
+                <p>Завантаження магічних предметів...</p>
+            </div>
+
+   
+            <div id="errorState" class="error-state" style="display: none;">
+                <p>❌ Сталася помилка при завантаженні даних. Спробуйте пізніше.</p>
+            </div>
+
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <p>🔍 Нічого не знайдено за вашим запитом.</p>
+            </div>
+
+            <div id="catalogContainer" class="catalog-grid"></div>
+
+            <div class="pagination-controls">
+                <button id="loadMoreBtn" class="btn btn-primary">Показати ще</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal" id="detailsModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="modalDetails"></div>
+        </div>
+    </div>
+
+   
+    <button class="back-to-top" aria-label="Вгору">↑</button>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span class="current-year">2026</span> Студент ІП-23. Всі права захищено.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/catalog.js" defer></script>
+</body>
+</html>
